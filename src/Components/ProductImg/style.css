@@ -1,0 +1,103 @@
+.ProductImg{
+    width: 100%;
+    position: relative;
+}
+.ProductImg img{
+    width: 100%;
+    height:300px;
+    transition: 0.3s linear;
+    
+}
+.ProductImg div {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 20px;
+} 
+.ProductImg div .icon{
+    width:30px;
+    height:30px;
+    color: #FFF;
+    cursor: pointer;
+}
+   .ProductImg .listImg {display: none;}
+@media (min-width:768px) {
+    .ProductImg {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+    .ProductImg img {
+        border-radius: 8px;
+        margin: 10px 0;
+        width:60%;
+    }
+        .ProductImg .listImg {
+            list-style: none;
+            width: 100%;
+            height: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 50px);
+            grid-template-rows: 50px;
+            column-gap: 20px;
+            justify-content: center;
+        }
+    
+        .ProductImg .listImg li img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    
+}
+
+@media (min-width:1024px) {
+    .ProductImg {
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        
+    }
+    .ProductImg img {width: 60%; }
+    .ProductImg .icon{display: none;}
+
+    .ProductImg .listImg{
+        list-style:none;
+        width:100%;
+        height:50px;
+        display:grid;
+        grid-template-columns: repeat(4 , 50px);
+        grid-template-rows: 50px;
+        column-gap:20px ;
+       justify-content: center;
+    }
+.ProductImg .listImg li img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+}
+.active{position: relative;}
+
+.active::after{
+    content: '';
+    position: absolute;
+    width:50px;
+    height:50px;
+    top:10px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    border-radius: 8px;
+    background-color: #F5F5F5;
+    opacity: 0.7;
+}
